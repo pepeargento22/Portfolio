@@ -1,0 +1,129 @@
+/* IMPORTS */
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+
+/* REGLAS GENERALES */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Times New Roman', 'Arial';
+    color: azure;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 1rem 3rem;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-redes {
+    position: relative;
+    top: 10px;
+}
+
+.links-redes span {
+    position: relative;
+    top: -5px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.links-redes div {
+    display: inline;
+    margin-right: 0.2rem;
+}
+
+.links-redes div img:hover {
+    border-radius: 50%;
+    background-color: #555;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    padding: 0.5rem 1rem;
+    border-right: solid azure 2px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.menu li:first-child {
+    border-left: solid azure 2px;
+}
+
+.menu li:hover {
+    background-color: azure;
+}
+
+.menu li:hover a {
+    color: #003;
+}
+
+.botones button {
+    cursor: pointer;
+}
+
+.botones .boton-modo {
+    width: 40px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: #222;
+}
+
+.botones .boton-mail {
+    position: relative;
+    top: -7px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #222;
+    color: azure;
+    border-radius: 0.5rem;
+}
+
+.botones .boton-menu,
+.botones ul {
+    display: none;
+}
+
+
+/* MAIN */
+
+main {
+    padding: 8rem 3rem 1rem 3rem;
+}
+
+section.contenedor-introduccion {
+    display: grid; /* DESPUES TENGO QUE ARMAR LA GRID Y PONER LA FOTO DEL CV */
+}
+
+/* FOOTER */
