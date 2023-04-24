@@ -214,12 +214,33 @@ main {
     width: 100%;
 }
 
-.contenedor-conocimientos li {
+.contenedor-conocimientos div > ul > li {
+    position: relative;
     padding: 1rem;
     margin: 0.5rem 1.5rem;
     font-weight: bold;
-    background-color: greenyellow;
+    background-image: linear-gradient(to right, purple, blue);
     border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.contenedor-conocimientos .flecha-abajo {
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 0;
+    margin-left: 0.1rem;
+    border-right: solid transparent 5px;
+    border-left: solid transparent 5px;
+    border-top: solid azure 10px;
+}
+
+.contenedor-conocimientos .sub-lista {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #222;
+    z-index: 1;
 }
 
 /* FOOTER */
