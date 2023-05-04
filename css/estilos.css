@@ -191,7 +191,8 @@ main {
     opacity: 1;
 }
 
-.contenedor-conocimientos h2 {
+.contenedor-conocimientos h2,
+.contenedor-proyectos h2 {
     margin-bottom: 2rem;
 }
 
@@ -244,5 +245,38 @@ main {
     background-color: #222;
     z-index: 1;
 }
+
+.contenedor-proyectos .contenedor-flex {
+    display: flex;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+.contenedor-flex .proyecto {
+    width: 40%;
+    margin: 2rem;
+}
+
+.proyecto div {
+    margin-bottom: 0.5rem;
+}
+
+.proyecto div img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.proyecto div a {
+    font-size: 1.8rem;
+}
+
+.proyecto p {
+    margin-bottom: 1rem;
+}
+
+.proyecto a:last-child {
+    
+}
+
 
 /* FOOTER */
