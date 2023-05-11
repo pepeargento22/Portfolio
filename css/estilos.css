@@ -28,6 +28,10 @@ h2 {
     font-size: 2.5rem;
 }
 
+p { 
+    color: #d0dddd;
+}
+
 ul {
     list-style-type: none;
 }
@@ -35,6 +39,15 @@ ul {
 a {
     text-decoration: none;
 }
+
+.icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 0;
+    fill: currentColor;
+    border-radius: 50%;
+  }
 
 /* HEADER */
 
@@ -69,8 +82,8 @@ nav {
     margin-right: 0.2rem;
 }
 
-.links-redes div img:hover {
-    border-radius: 50%;
+.links-redes .icon-github:hover,
+.links-redes .icon-linkedin:hover {
     background-color: #555;
 }
 
@@ -106,6 +119,13 @@ nav {
     margin-right: 1rem;
     border-radius: 50%;
     background-color: #222;
+}
+
+.botones .icon-brightness-contrast {
+    position: relative;
+    top: 2px;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .botones .boton-mail {
@@ -225,27 +245,6 @@ main {
     cursor: pointer;
 }
 
-.contenedor-conocimientos .flecha-abajo {
-    display: inline-block;
-    width: 10px;
-    height: 2px;
-    margin-bottom: 0;
-    margin-left: 0.1rem;
-    border-right: solid transparent 5px;
-    border-left: solid transparent 5px;
-    border-top: solid azure 10px;
-}
-
-.contenedor-conocimientos .sub-lista {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding-left: 0.5rem;
-    opacity: 0.7;
-    background-color: #222;
-    z-index: 1;
-}
-
 .contenedor-proyectos .contenedor-flex {
     display: flex;
     align-items: space-between;
@@ -255,14 +254,20 @@ main {
 .contenedor-flex .proyecto {
     width: 40%;
     margin: 2rem;
+    padding: 2rem 1rem;
+    background-color: #333;
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
 .proyecto div {
+    text-align: left;
     margin-bottom: 0.5rem;
 }
 
 .proyecto div img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -270,13 +275,27 @@ main {
     font-size: 1.8rem;
 }
 
+.proyecto:last-child div a {
+    cursor: default;
+}
+
 .proyecto p {
-    margin-bottom: 1rem;
+    text-align: left;
+    margin-bottom: 2.5rem;
 }
 
-.proyecto a:last-child {
-    
+.proyecto > a {
+    padding: 0.5rem;
+    background-image: radial-gradient(green, #0c500c, #333);
+    background-color: rgb(12, 80, 12);
+    border-radius: 0.7rem;
 }
 
+
+  .icon-embed2 {
+    position: relative;
+    top: 6px;
+    margin-right: 0.2rem;
+  }
 
 /* FOOTER */
