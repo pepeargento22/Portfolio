@@ -40,6 +40,10 @@ a {
     text-decoration: none;
 }
 
+svg {
+    display: none;
+}
+
 .icon {
     display: inline-block;
     width: 1.5rem;
@@ -245,9 +249,13 @@ main {
     cursor: pointer;
 }
 
-.contenedor-proyectos .contenedor-flex {
+.contenedor-proyectos {
+    margin-bottom: 1rem;
+}
+
+.contenedor-flex {
     display: flex;
-    align-items: space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -298,4 +306,15 @@ main {
     margin-right: 0.2rem;
   }
 
-/* FOOTER */
+
+  /* FOOTER */
+
+footer {
+    padding: 1rem 3rem;
+    background-color: black;
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
