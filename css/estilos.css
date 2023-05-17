@@ -67,11 +67,12 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .links-redes {
     position: relative;
-    top: 10px;
+    top: 2px;
 }
 
 .links-redes span {
@@ -96,7 +97,7 @@ nav {
 }
 
 .menu li {
-    padding: 0.5rem 1rem;
+    
     border-right: solid azure 2px;
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
@@ -108,6 +109,10 @@ nav {
 
 .menu li:hover {
     background-color: azure;
+}
+
+.menu li a {
+    padding: 0.5rem 1rem;
 }
 
 .menu li:hover a {
@@ -143,7 +148,7 @@ nav {
     border-radius: 0.5rem;
 }
 
-.botones .boton-menu,
+.botones .menu-hamburguesa,
 .botones ul {
     display: none;
 }
@@ -314,8 +319,8 @@ footer {
     background-color: black;
 }
 
-footer h3 {
-    font-size: 1.8rem;
+footer h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -331,6 +336,17 @@ footer span {
     position: relative;
     top: -8px;
     margin-left: 0.4rem;
+}
+
+footer .contenedor-sorpresa {
+    width: 10%;
+    min-width: 60px;
+}
+
+.contenedor-sorpresa img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 
@@ -353,11 +369,7 @@ footer span {
         font-size: 0.8rem;
     }
 
-    .links-redes {
-        top: 0;
-    }
-
-    .menu li {
+    .menu li a {
         padding: 0.2rem 0.5rem;
     }
 
@@ -373,6 +385,7 @@ footer span {
     }
 
     .grid-item1 h1 {
+        margin-bottom: 0.5rem;
         font-size: 2.2rem;
     }
 
@@ -394,5 +407,146 @@ footer span {
         margin-right: 1rem;
     }
 
-    /*FALTA AJUSTAR DE PROYECTOS EN ADELANTE*/
+
+    /* FOOTER */
+
+    footer {
+        padding: 1rem;
+    }
+
+    footer h2 {
+        font-size: 1.8rem;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+    /* REGLAS GENERALES */
+
+    section {
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    
+    /* HEADER */
+
+    .links-redes span {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .botones .boton-modo {
+        margin-right: 0;
+    }
+
+    .botones .menu-hamburguesa{
+        display: inline-block;
+        margin-left: 0.5rem;
+        
+    }
+
+    /* FALTAN ESTILOS PARA EL MENU HAMBURGUESA */
+
+    /* MAIN */
+
+    main {
+        padding-top: 5rem;
+    }
+
+    .grid-item1 h1 {
+        font-size: 1.7rem;
+    }
+
+    .grid-item2 p {
+        font-size: 0.8rem;
+    }
+
+    .grid-item3 {
+        display: none;
+    }
+
+    .contenedor-conocimientos h2,
+    .contenedor-proyectos h2 {
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-conocimientos div {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .contenedor-conocimientos h3 {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .contenedor-conocimientos div ul {
+        justify-content: center;
+    }
+
+    .contenedor-conocimientos div ul li {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .contenedor-proyectos .contenedor-flex {
+        justify-content: center;
+    }
+
+    .contenedor-proyectos .contenedor-flex .proyecto {
+        width: 95%;
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+    }
+
+    .contenedor-proyectos .proyecto:first-child {
+        margin-top: 0;
+    }
+
+    .proyecto div a {
+        font-size: 1.4rem;
+    }
+
+    .proyecto p {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 1rem 0.5rem;
+    }
+
+    footer h2 {
+        font-size: 1.3rem;
+    }
+
+    footer .contenedor-flex {
+        justify-content: space-around;
+    }
+
+    footer ul {
+        padding-left: 0.2rem;
+    }
+
+    footer span {
+        font-size: 0.8rem;
+    }
+
+    .contenedor-flex .contenedor-sorpresa,
+    .contenedor-flex .botones {
+        margin-top: 1rem;
+        margin-left: 0.7rem;
+    }
 }
