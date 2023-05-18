@@ -21,6 +21,7 @@ body {
 }
 
 section {
+    position: relative;
     margin-bottom: 6rem;
 }
 
@@ -433,6 +434,15 @@ footer .contenedor-sorpresa {
         font-size: 1.3rem;
     }
 
+    ul.visible {
+        display: block;
+    }
+
+    .mobile {
+        position: absolute;
+        top: -80px;   
+    }
+
     
     /* HEADER */
 
@@ -448,13 +458,35 @@ footer .contenedor-sorpresa {
         margin-right: 0;
     }
 
-    .botones .menu-hamburguesa{
+    .botones .menu-hamburguesa {
+        position: relative;
         display: inline-block;
         margin-left: 0.5rem;
         
     }
 
-    /* FALTAN ESTILOS PARA EL MENU HAMBURGUESA */
+    .botones .menu-hamburguesa ul {
+        position: absolute;
+        top: 25px;
+        right: 0;
+    }
+
+    .menu-hamburguesa li {
+        background-color: black;
+    }
+
+    .menu-hamburguesa li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.4rem;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .menu-hamburguesa li a:hover {
+        background-color: azure;
+        color: #003;
+    }
+
 
     /* MAIN */
 
@@ -521,6 +553,7 @@ footer .contenedor-sorpresa {
         font-size: 0.8rem;
         margin-bottom: 2rem;
     }
+
 
     /* FOOTER */
 
