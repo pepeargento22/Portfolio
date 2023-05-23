@@ -120,7 +120,8 @@ nav {
     color: #003;
 }
 
-.botones button {
+.botones button,
+.botones .boton-menu {
     cursor: pointer;
 }
 
