@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Portfolio</title>
 </head>
-<body>
-    <header>
+<body class="dark-mode">
+    <header class="dark-mode">
         <nav>
-            <div class="links-redes">
+            <div class="links-redes dark-mode">
                 <span>Francisco Garcia Huidobro</span>
                 <div><a href="https://github.com/pepeargento22" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a></div>
                 <div><a href="https://www.linkedin.com/in/francisco-garcia-huidobro-2256a41b5/" target="_blank"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a></div>
             </div>
-            <div class="menu">
+            <div class="menu dark-mode">
                 <ul>
                     <li><a href="#introduccion">Intro</a></li>
                     <li><a href="#conocimientos">Conocimientos</a></li>
@@ -23,10 +23,10 @@
                 </ul>
             </div>
             <div class="botones">
-                <button class="boton-modo"><svg class="icon icon-brightness-contrast"><use xlink:href="#icon-brightness-contrast"></use></svg></button> <!-- BOTON LIGHT/DARK MODE -->
-                <button class="boton-mail">Mandar mail</button>
-                <div class="menu-hamburguesa">
-                    <div class="boton-menu"><img class="imagen-menu" src="img/Hamburger Menu.svg" alt="menu"></div>
+                <button class="boton-modo dark-mode"><svg class="icon icon-brightness-contrast"><use class="icon-modo" xlink:href="#icon-brightness-contrast"></use></svg></button>
+                <button class="boton-mail dark-mode"><a href="mailto:paco19956@hotmail.com">Mandar mail</a></button>
+                <div class="menu-hamburguesa dark-mode">
+                    <div class="boton-menu"><svg class="icon icon-menu"><use class="menu-mobile" xlink:href="#icon-menu"></use></svg></div>
                     <ul>
                         <li><a href="#introduccion">Intro</a></li>
                         <li><a href="#conocimientos-mobile">Conocimientos</a></li>
@@ -44,7 +44,7 @@
                 <h2>Desarrollador Front End</h2>
             </div>
             <div class="grid-item2">
-                <p>
+                <p class="dark-mode">
                     Soy un desarrollador autodidacta que comenzó a programar en 2020 aprendiendo Java. Luego me interesó más el 
                     desarrollo Front End por lo que hice un curso de 6 meses de Front End Web Developer en EducacionIT. Tengo 27 
                     años y vivo en Capital Federal. Actualmente, busco formar parte de un equipo de trabajo en el que pueda hacer 
@@ -53,7 +53,7 @@
             </div>
             
             <div class="grid-item3">
-                <a href="">
+                <a href="img/CV.pdf" download>
                     <img src="img/CV.png" alt="CV">
                     <div class="descargar">
                         <img src="img/download.svg" alt="Descargar CV">
@@ -62,7 +62,7 @@
             </div>
             <a name="conocimientos"></a>
         </section>
-        <section class="contenedor-conocimientos">
+        <section class="contenedor-conocimientos dark-mode">
             <a class="mobile" name="conocimientos-mobile"></a>
             <h2>Conocimientos</h2>
             <div>
@@ -133,50 +133,50 @@
             <a class="mobile" name="proyectos-mobile"></a>
             <h2>Proyectos</h2>
             <div class="contenedor-flex">
-                <div class="proyecto">
+                <div class="proyecto dark-mode">
                     <div>
                         <img src="img/TikyTyki.png" alt="pagina web TikyTyki">
                     </div>
                     <div>
                         <a href="https://tikytyki.github.io/" target="_blank">TikyTyki →</a>
                     </div>
-                    <p>Página web de un emprendimiento de fightsticks</p>
+                    <p class="dark-mode">Página web de un emprendimiento de fightsticks</p>
                     <a href="https://github.com/tikytyki/tikytyki.github.io" target="_blank"><svg class="icon icon-embed2"><use xlink:href="#icon-embed2"></use></svg> <span>Código</span></a>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto dark-mode">
                     <div>
                         <img src="img/YelpCamp.png" alt="pagina web YelpCamp">
                     </div>
                     <div>
                         <a href="" target="_blank">YelpCamp →</a>
                     </div>
-                    <p>Página web de reseñas de campamentos</p>
+                    <p class="dark-mode">Página web de reseñas de campamentos</p>
                     <a href="https://github.com/pepeargento22/YelpCamp" target="_blank"><svg class="icon icon-embed2"><use xlink:href="#icon-embed2"></use></svg> <span>Código</span></a>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto dark-mode">
                     <div>
                         <img src="img/Ondeck.png" alt="pagina web Ondeck">
                     </div>
                     <div>
                         <a href="">Ondeck →</a> <!-- tiene un par de bugs, revisar Ondeck -->
                     </div>
-                    <p>Desafío sacado de Codewell.cc para practicar</p>
+                    <p class="dark-mode">Desafío sacado de Codewell.cc para practicar</p>
                     <a href="https://github.com/pepeargento22/Ondeck" target="_blank"><svg class="icon icon-embed2"><use xlink:href="#icon-embed2"></use></svg> <span>Código</span></a>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto dark-mode">
                     <div>
                         <img src="img/TimeWizard.png" alt="demostración del bot funcionando">
                     </div>
                     <div>
                         <a href="">Time Wizard</a>
                     </div>
-                    <p>Bot de Discord hecho en Python</p>
+                    <p class="dark-mode">Bot de Discord hecho en Python</p>
                     <a href="https://github.com/pepeargento22/Bot-Time-Wizard" target="_blank"><svg class="icon icon-embed2"><use xlink:href="#icon-embed2"></use></svg> <span>Código</span></a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="dark-mode">
         <h2>Contacto</h2>
         <div class="contenedor-flex">
             <div>
@@ -187,9 +187,10 @@
             </div>
             <div class="contenedor-sorpresa">
                 <img src="img/cara.png" alt="cliqueame">
+                <audio src="img/Audio.mp3" type="audio/mp3"></audio>
             </div>
             <div class="botones">
-                <button class="boton-mail">Mandar mail</button>
+                <button class="boton-mail dark-mode"><a href="mailto:paco19956@hotmail.com">Mandar mail</a></button>
             </div>
         </div>
     </footer>
@@ -202,6 +203,9 @@
         </symbol>
         <symbol id="icon-brightness-contrast" viewBox="0 0 32 32">
             <path d="M16 8c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM16 21v-10c2.757 0 5 2.243 5 5s-2.243 5-5 5zM16 26c1.105 0 2 0.895 2 2v2c0 1.105-0.895 2-2 2s-2-0.895-2-2v-2c0-1.105 0.895-2 2-2zM16 6c-1.105 0-2-0.895-2-2v-2c0-1.105 0.895-2 2-2s2 0.895 2 2v2c0 1.105-0.895 2-2 2zM30 14c1.105 0 2 0.895 2 2s-0.895 2-2 2h-2c-1.105 0-2-0.895-2-2s0.895-2 2-2h2zM6 16c0 1.105-0.895 2-2 2h-2c-1.105 0-2-0.895-2-2s0.895-2 2-2h2c1.105 0 2 0.895 2 2zM25.899 23.071l1.414 1.414c0.781 0.781 0.781 2.047 0 2.828s-2.047 0.781-2.828 0l-1.414-1.414c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0zM6.101 8.929l-1.414-1.414c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l1.414 1.414c0.781 0.781 0.781 2.047 0 2.828s-2.047 0.781-2.828 0zM25.899 8.929c-0.781 0.781-2.047 0.781-2.828 0s-0.781-2.047 0-2.828l1.414-1.414c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-1.414 1.414zM6.101 23.071c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-1.414 1.414c-0.781 0.781-2.047 0.781-2.828 0s-0.781-2.047 0-2.828l1.414-1.414z"></path>
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+            <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
         </symbol>
         <symbol id="icon-embed2" viewBox="0 0 40 32">
             <path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>

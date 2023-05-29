@@ -11,13 +11,18 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', 'Times New Roman', 'Arial';
-    color: azure;
     padding: 0;
     margin: 0;
 }
 
-body {
+.dark-mode {
     background-color: #222;
+    color: azure;
+}
+
+.light-mode {
+    background-color: #eee;
+    color: #222;
 }
 
 section {
@@ -29,8 +34,14 @@ h2 {
     font-size: 2.5rem;
 }
 
-p { 
+p.dark-mode { 
     color: #d0dddd;
+    background-color: inherit;
+}
+
+p.light-mode {
+    color: #2f2222;
+    background-color: inherit;
 }
 
 ul {
@@ -39,6 +50,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 svg {
@@ -51,8 +63,9 @@ svg {
     height: 1.5rem;
     stroke-width: 0;
     fill: currentColor;
+    color: inherit;
     border-radius: 50%;
-  }
+}
 
 /* HEADER */
 
@@ -61,8 +74,15 @@ header {
     width: 100%;
     margin-bottom: 2.5rem;
     padding: 1rem 3rem;
-    background-color: black;
     z-index: 2;
+}
+
+header.dark-mode {
+    background-color: black;
+}
+
+header.light-mode {
+    background-color: white;
 }
 
 nav {
@@ -74,6 +94,7 @@ nav {
 .links-redes {
     position: relative;
     top: 2px;
+    background-color: inherit;
 }
 
 .links-redes span {
@@ -88,9 +109,18 @@ nav {
     margin-right: 0.2rem;
 }
 
-.links-redes .icon-github:hover,
-.links-redes .icon-linkedin:hover {
+.links-redes.dark-mode .icon-github:hover,
+.links-redes.dark-mode .icon-linkedin:hover {
     background-color: #555;
+}
+
+.links-redes.light-mode .icon-github:hover,
+.links-redes.light-mode .icon-linkedin:hover {
+    background-color: #ccc;
+}
+
+.menu {
+    background-color: inherit;
 }
 
 .menu ul {
@@ -98,26 +128,44 @@ nav {
 }
 
 .menu li {
-    
-    border-right: solid azure 2px;
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
-.menu li:first-child {
+.menu.dark-mode li {
+    border-right: solid azure 2px;
+}
+
+.menu.light-mode li {
+    border-right: solid #222 2px;
+}
+
+.menu.dark-mode li:first-child {
     border-left: solid azure 2px;
 }
 
-.menu li:hover {
+.menu.dark-mode li:first-child {
+    border-left: solid #222 2px;
+}
+
+.menu.dark-mode li:hover {
     background-color: azure;
+}
+
+.menu.light-mode li:hover {
+    background-color: #222;
 }
 
 .menu li a {
     padding: 0.5rem 1rem;
 }
 
-.menu li:hover a {
+.menu.dark-mode li:hover a {
     color: #003;
+}
+
+.menu.light-mode li:hover a {
+    color: #ffc;
 }
 
 .botones button,
@@ -129,7 +177,6 @@ nav {
     width: 40px;
     margin-right: 1rem;
     border-radius: 50%;
-    background-color: #222;
 }
 
 .botones .icon-brightness-contrast {
@@ -142,17 +189,22 @@ nav {
 .botones .boton-mail {
     position: relative;
     top: -7px;
-    padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 700;
-    background-color: #222;
-    color: azure;
     border-radius: 0.5rem;
 }
 
-.botones .menu-hamburguesa,
-.botones ul {
+.boton-mail a {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.botones .menu-hamburguesa {
     display: none;
+}
+
+.icon-menu {
+    width: 2rem;
 }
 
 
@@ -251,9 +303,16 @@ main {
     padding: 1rem;
     margin: 0.5rem 1.5rem;
     font-weight: bold;
-    background-image: linear-gradient(to right, purple, blue);
     border-radius: 0.3rem;
     cursor: pointer;
+}
+
+.contenedor-conocimientos.dark-mode div > ul > li {
+    background-image: linear-gradient(to right, purple, blue);
+}
+
+.contenedor-conocimientos.light-mode div > ul > li {
+    background-image: linear-gradient(to right, #ff00ff, #00aaff);
 }
 
 .contenedor-proyectos {
@@ -270,9 +329,16 @@ main {
     width: 40%;
     margin: 2rem;
     padding: 2rem 1rem;
-    background-color: #333;
     border-radius: 0.5rem;
     text-align: center;
+}
+
+.proyecto.dark-mode {
+    background-color: #333;
+}
+
+.proyecto.light-mode {
+    background-color: #ccc;
 }
 
 .proyecto div {
@@ -301,11 +367,16 @@ main {
 
 .proyecto > a {
     padding: 0.5rem;
-    background-image: radial-gradient(green, #0c500c, #333);
-    background-color: rgb(12, 80, 12);
     border-radius: 0.7rem;
 }
 
+.proyecto.dark-mode > a {
+    background-image: radial-gradient(green, #0c500c, #333);
+}
+
+.proyecto.light-mode > a {
+    background-image: radial-gradient(green, #0cbf0c, #ccc);
+}
 
 .icon-embed2 {
     position: relative;
@@ -318,7 +389,14 @@ main {
 
 footer {
     padding: 1rem 3rem;
+}
+
+footer.dark-mode {
     background-color: black;
+}
+
+footer.light-mode {
+    background-color: white;
 }
 
 footer h2 {
@@ -351,6 +429,18 @@ footer .contenedor-sorpresa {
     cursor: pointer;
 }
 
+.sorpresa {
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: 8;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+
+    100% { transform: rotate(360deg); }   
+}
+
 
 @media screen and (max-width: 1000px) {
     
@@ -364,7 +454,7 @@ footer .contenedor-sorpresa {
     /* HEADER */
 
     header {
-        padding: 1rem 0.5rem;
+        padding: 1rem;
     }
 
     .links-redes span {
@@ -435,8 +525,8 @@ footer .contenedor-sorpresa {
         font-size: 1.3rem;
     }
 
-    ul.visible {
-        display: block;
+    .menu-hamburguesa ul.visible {
+        max-height: 200px;
     }
 
     .mobile {
@@ -463,17 +553,24 @@ footer .contenedor-sorpresa {
         position: relative;
         display: inline-block;
         margin-left: 0.5rem;
-        
     }
 
-    .botones .menu-hamburguesa ul {
-        position: absolute;
-        top: 25px;
-        right: 0;
-    }
-
-    .menu-hamburguesa li {
+    .menu-hamburguesa.dark-mode {
         background-color: black;
+    }
+
+    .menu-hamburguesa.light-mode {
+        background-color: white;
+    }
+
+    .menu-hamburguesa ul {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        max-height: 0;
+        transition: max-height 1s ease-out;
+        overflow: hidden;
+        background-color: inherit;
     }
 
     .menu-hamburguesa li a {
@@ -483,9 +580,14 @@ footer .contenedor-sorpresa {
         transition: background-color 0.5s, color 0.5s;
     }
 
-    .menu-hamburguesa li a:hover {
+    .menu-hamburguesa.dark-mode li a:hover {
         background-color: azure;
         color: #003;
+    }
+
+    .menu-hamburguesa.light-mode li a:hover {
+        background-color: #222;
+        color: #ffc;
     }
 
 
