@@ -55,25 +55,29 @@ let musica = document.querySelector('audio');
 
 cara.addEventListener('click', function() {
     if (cara.classList.value != 'sorpresa') {
-        /* ESTO LO PUEDO DEFINIR CON UNA FUNCION */
-        cv.classList.add('sorpresa');
-        conocimientos.forEach(li => {
-            li.classList.add('sorpresa');
-        });
-        proyectos.forEach(proyecto => {
-            proyecto.classList.add('sorpresa');
-        });
-        cara.classList.add('sorpresa');
         musica.play();
-        setTimeout(function() {
-            cv.classList.remove('sorpresa');
-            conocimientos.forEach(li => {
-                li.classList.remove('sorpresa');
-            });
-            proyectos.forEach(proyecto => {
-                proyecto.classList.remove('sorpresa');
-            });
-            cara.classList.remove('sorpresa');
-        }, 16000);
+        girarElemento(conocimientos);
+        girarElemento(cv);
+        
+        girarElemento(proyectos);
+        girarElemento(cara);
     }
 })
+
+function girarElemento(elem) {
+    let cant = elem.length;
+    console.log(cant)
+    if (cant == undefined) /*error aca*/ {
+        elem.classList.add('sorpresa');
+        setTimeout(frenarElemento(elem), 16000);
+    } else {
+        elem.forEach(e => {
+            e.classList.add('sorpresa');
+            setTimeout(frenarElemento(e), 16000);
+        });
+    }
+}
+
+function frenarElemento(el) {
+    el.classList.remove('sorpresa');
+}

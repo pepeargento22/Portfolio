@@ -165,7 +165,7 @@ nav {
 }
 
 .menu.light-mode li:hover a {
-    color: #ffc;
+    color: #ffd;
 }
 
 .botones button,
@@ -587,7 +587,7 @@ footer .contenedor-sorpresa {
 
     .menu-hamburguesa.light-mode li a:hover {
         background-color: #222;
-        color: #ffc;
+        color: #ffd;
     }
 
 
