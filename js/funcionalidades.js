@@ -50,34 +50,42 @@ let cv = document.querySelector('.grid-item3');
 let conocimientos = document.querySelectorAll('.contenedor-conocimientos ul li');
 let proyectos = document.querySelectorAll('.proyecto');
 let cara = document.querySelector('.contenedor-sorpresa img');
+let conjunto = [cv, conocimientos, proyectos, cara];
 let musica = document.querySelector('audio');
 
 
 cara.addEventListener('click', function() {
     if (cara.classList.value != 'sorpresa') {
         musica.play();
-        girarElemento(conocimientos);
-        girarElemento(cv);
-        
-        girarElemento(proyectos);
-        girarElemento(cara);
+        girarElementos(conjunto);
+        setTimeout( function() {
+            frenarElementos(conjunto);
+        }, 16000);    
     }
 })
 
-function girarElemento(elem) {
-    let cant = elem.length;
-    console.log(cant)
-    if (cant == undefined) /*error aca*/ {
-        elem.classList.add('sorpresa');
-        setTimeout(frenarElemento(elem), 16000);
-    } else {
-        elem.forEach(e => {
-            e.classList.add('sorpresa');
-            setTimeout(frenarElemento(e), 16000);
-        });
-    }
+function girarElementos(array) {
+    array.forEach(elem => {
+        let cant = elem.length;
+        if (cant == undefined) {
+            elem.classList.add('sorpresa');
+        } else {
+            elem.forEach(e => {
+                e.classList.add('sorpresa');
+            });
+        }
+    });
 }
 
-function frenarElemento(el) {
-    el.classList.remove('sorpresa');
+function frenarElementos(arr) {
+    arr.forEach(el => {
+        let n = el.length;
+        if (n == undefined) {
+            el.classList.remove('sorpresa');
+        } else {
+            el.forEach(e => {
+                e.classList.remove('sorpresa');
+            });
+        }
+    });
 }

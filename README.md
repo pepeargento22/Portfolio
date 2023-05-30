@@ -1,4 +1,10 @@
 # Portfolio
-Portfolio con mis proyectos y conocimientos
+Portfolio de presentación de Francisco García Huidobro.
 
-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
+Incluye:
+
+-Conocimientos informáticos y adyacentes
+-Listado de proyectos creados
+-Curriculum vitae descargable
+-Un pequeño easter egg
+
