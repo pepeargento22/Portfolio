@@ -144,7 +144,7 @@ nav {
     border-left: solid azure 2px;
 }
 
-.menu.dark-mode li:first-child {
+.menu.light-mode li:first-child {
     border-left: solid #222 2px;
 }
 
