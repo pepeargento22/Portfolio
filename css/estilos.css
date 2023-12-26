@@ -88,6 +88,7 @@ header.light-mode {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -168,6 +169,11 @@ nav {
     color: #ffd;
 }
 
+.botones {
+    display: flex;
+    align-items: center;
+}
+
 .botones button,
 .botones .boton-menu {
     cursor: pointer;
@@ -188,7 +194,6 @@ nav {
 
 .botones .boton-mail {
     position: relative;
-    top: -7px;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 0.5rem;
@@ -236,8 +241,9 @@ main {
 
 .grid-item2 p {
     padding-right: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
+    max-width: 80%;
 }
 
 .grid-item3 {
@@ -307,12 +313,14 @@ main {
     
 }
 
-.contenedor-conocimientos.dark-mode div > ul > li {
-    background-image: linear-gradient(to right, purple, blue);
+.contenedor-conocimientos.dark-mode div > ul > li,
+.proyecto.dark-mode {
+    background-color: #333
 }
 
-.contenedor-conocimientos.light-mode div > ul > li {
-    background-image: linear-gradient(to right, #ff00ff, #00aaff);
+.contenedor-conocimientos.light-mode div > ul > li,
+.proyecto.light-mode {
+    background-color: #ccc;
 }
 
 .contenedor-proyectos {
@@ -331,14 +339,6 @@ main {
     padding: 2rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
-}
-
-.proyecto.dark-mode {
-    background-color: #333;
-}
-
-.proyecto.light-mode {
-    background-color: #ccc;
 }
 
 .proyecto div {
@@ -363,6 +363,7 @@ main {
 .proyecto p {
     text-align: left;
     margin-bottom: 2.5rem;
+    font-size: 1.2rem;
 }
 
 .proyecto > a {
@@ -441,6 +442,18 @@ footer .contenedor-sorpresa {
     100% { transform: rotate(360deg); }   
 }
 
+@media screen and (max-width: 1400px) {
+
+     /* MAIN */
+
+     .grid-item2 p {
+        font-size: 1.2rem;
+     }
+
+     .proyecto p {
+        font-size: 1rem;
+     }
+}
 
 @media screen and (max-width: 1000px) {
     
@@ -603,6 +616,7 @@ footer .contenedor-sorpresa {
 
     .grid-item2 p {
         font-size: 0.8rem;
+        max-width: 100%;
     }
 
     .grid-item3 {
