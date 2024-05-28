@@ -53,6 +53,10 @@ a {
     color: inherit;
 }
 
+button:active, button.dark-mode:active {
+    box-shadow: 4px 4px black inset;
+}
+
 svg {
     display: none;
 }
@@ -78,7 +82,7 @@ header {
 }
 
 header.dark-mode {
-    background-color: black;
+    background-color: #111;
 }
 
 header.light-mode {
@@ -356,8 +360,13 @@ main {
     font-size: 1.8rem;
 }
 
+.proyecto div a:hover {
+    text-shadow: 3px 3px 5px;
+}
+
 .proyecto:last-child div a {
     cursor: default;
+    text-shadow: none;
 }
 
 .proyecto p {
@@ -372,11 +381,11 @@ main {
 }
 
 .proyecto.dark-mode > a {
-    background-image: radial-gradient(green, #0c500c, #333);
+    background-color: #0c500c;
 }
 
 .proyecto.light-mode > a {
-    background-image: radial-gradient(green, #0cbf0c, #ccc);
+    background-color: #0cbf0c;
 }
 
 .icon-embed2 {
