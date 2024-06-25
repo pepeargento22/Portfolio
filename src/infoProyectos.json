@@ -1,0 +1,42 @@
+[{
+    "titulo" : "Ecommerce",
+    "pagina" : "http://ecommerce.francisco-gh.com.ar/",
+    "imagen" : "/assets/Ecommerce.png",
+    "repositorio" : "https://github.com/pepeargento22/Ecommerce", 
+    "descripcion" : "Diseño de una página ecommerce desarrollada con React y Tailwind CSS."
+},
+{
+    "titulo" : "Buscador Peliculas",
+    "pagina" : "http://buscadorpelis.francisco-gh.com.ar/",
+    "imagen" : "/assets/BuscadorPelis.png",
+    "repositorio" : "https://github.com/pepeargento22/BuscadorPeliculas", 
+    "descripcion" : "Aplicación de React para buscar películas."
+},
+{
+    "titulo" : "YelpCamp",
+    "pagina" : "http://yelpcamp.francisco-gh.com.ar/",
+    "imagen" : "/assets/YelpCamp.png",
+    "repositorio" : "https://github.com/pepeargento22/YelpCamp", 
+    "descripcion" : "Página web de reseñas de campamentos."
+},
+{
+    "titulo" : "TaTeTi",
+    "pagina" : "http://tateti.francisco-gh.com.ar/",
+    "imagen" : "/assets/TaTeTi.png",
+    "repositorio" : "https://github.com/pepeargento22/TaTeTi", 
+    "descripcion" : "Aplicación de React para jugar tateti."
+},
+{
+    "titulo" : "Ondeck",
+    "pagina" : "http://ondeck.francisco-gh.com.ar/",
+    "imagen" : "/assets/Ondeck.png",
+    "repositorio" : "https://github.com/pepeargento22/Ondeck", 
+    "descripcion" : "Desafío sacado de Codewell.cc para practicar SPA."
+},
+{
+    "titulo" : "Time Wizard",
+    "pagina" : "",
+    "imagen" : "/assets/TimeWizard.png",
+    "repositorio" : "https://github.com/pepeargento22/Bot-Time-Wizard", 
+    "descripcion" : "Bot de Discord desarrollado en Python que te pasa la hora de Argentina a otra zona horaria."
+}]

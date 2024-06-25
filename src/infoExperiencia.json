@@ -1,0 +1,16 @@
+[{
+    "titulo" : "Chada Safe",
+    "pagina" : "https://chadasafe.com.ar/",
+    "imagen" : "/assets/ChadaSafe.png",
+    "repositorio" : "", 
+    "descripcion" : "Trabajo freelance que consistía en desarrollar una página web SPA para una empresa de alquiler de cajas de seguridad.",
+    "año" : "2023"
+},
+{
+    "titulo" : "TikyTyki",
+    "pagina" : "https://tikytyki.github.io/",
+    "imagen" : "/assets/TikyTyki.png",
+    "repositorio" : "https://github.com/tikytyki/tikytyki.github.io", 
+    "descripcion" : "Trabajo freelance que se basó en desarrollar una página web para un emprendimiento de fightsticks.",
+    "año" : "2021"
+}]
