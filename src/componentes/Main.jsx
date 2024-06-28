@@ -2,7 +2,7 @@
 import infoProyectos from '../infoProyectos.json'
 import infoExperiencia from '../infoExperiencia.json'
 import CV from '../assets/CV.pdf'
-import CV_foto from '../assets/CV_foto.png'
+import CV_foto from '../assets/CV_foto.webp'
 import download from '../assets/download.svg'
 
 import { useModos } from '../hooks/useModos'
@@ -14,10 +14,10 @@ function Introduccion({estado}) {
         <>
             <section className="contenedor-introduccion">
                 <div className= {`contenedor-cv ${estado} girable`}>
-                    <a href={CV} download>
-                        <img src={CV_foto} alt="CV" />
+                    <a href={CV} download='Francisco Garcia Huidobro'>
+                        <img src={CV_foto} fetchPriority="high" alt="descargar CV" />
                         <div className="descargar">
-                            <img src={download} alt="Descargar CV" />
+                            <img src={download} alt="boton de descarga" />
                         </div>
                     </a>
                     <a name="experiencia"></a>
@@ -40,6 +40,7 @@ function Introduccion({estado}) {
 } 
 
 function Proyectos({ titulo, estado, info, link }) {
+    const hayLink = link != undefined
 
     return (
         <section className={`contenedor-${titulo}`}>
@@ -54,11 +55,15 @@ function Proyectos({ titulo, estado, info, link }) {
                         imagen = {proyecto.imagen}
                         repositorio = {proyecto.repositorio} 
                         descripcion = {proyecto.descripcion}
+                        tecnologias_utilizadas = {proyecto.tecnologias_utilizadas}
                         año = {proyecto.año}
                     />
                 ))}
             </div>
-            <a name={link}></a>
+            { hayLink 
+                ? (<a name={link}></a>) 
+                : ('')
+            }
         </section>
     )
 }

@@ -1,14 +1,8 @@
-# Portfolio
-Portfolio de presentación de Francisco García Huidobro.
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Incluye:
+Currently, two official plugins are available:
 
--Conocimientos informáticos y adyacentes.
-
--Listado de proyectos creados.
-
--Curriculum vitae descargable.
-
--Un pequeño easter egg.
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

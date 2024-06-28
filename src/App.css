@@ -263,7 +263,8 @@ main {
 
 .contenedor-cv a > img {
     transition: opacity 1s;
-    max-width: 250px;
+    width: 80%;
+    aspect-ratio: 7/10;
 }
 
 .contenedor-cv.dark-mode a > img {
@@ -290,6 +291,8 @@ main {
 }
 
 .descargar img {
+    aspect-ratio: 1/1;
+    width: 40px;
     padding: 0.2rem;
     border-radius: 0.3rem;
     background-color: #eee;
@@ -299,10 +302,6 @@ main {
 
 .contenedor-cv a:hover .descargar img {
     opacity: 1;
-}
-
-.experiencia-mobile {
-    display: none;
 }
 
 .contenedor-proyectos {
@@ -335,7 +334,7 @@ main {
 .contenedor-flex .proyecto {
     width: 40%;
     margin: 2rem;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
 }
@@ -378,7 +377,9 @@ main {
 }
 
 .proyecto > a {
+    display: inline-block;
     padding: 0.5rem;
+    margin-bottom: 3rem;
     border-radius: 0.7rem;
 }
 
@@ -398,12 +399,34 @@ main {
     background-color: #0cdf0c;
 }
 
-.icon-embed2 {
+.icon-git {
     position: relative;
     top: 6px;
     margin-right: 0.2rem;
 }
 
+.proyecto-tecnologias {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    margin-top: 2rem;
+    gap: 10px;
+}
+
+.proyecto-tecnologias li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0.5rem
+}
+
+.proyecto.dark-mode li {
+    background-color: #222;
+}
+
+.proyecto.light-mode li {
+    background-color: #eee;
+}
 
 /* FOOTER */
 
@@ -449,6 +472,7 @@ footer .contenedor-sorpresa {
 
 .contenedor-sorpresa img {
     width: 100%;
+    aspect-ratio: 3/2;
     object-fit: cover;
     cursor: pointer;
 }
@@ -523,6 +547,10 @@ footer .contenedor-sorpresa {
 
     .contenedor-cv {
         padding-top: 2rem;
+    }
+
+    .contenedor-experiencia {
+        min-height: 450px;
     }
 
 
@@ -640,12 +668,8 @@ footer .contenedor-sorpresa {
         font-size: 1rem;
     }
 
-    .experiencia-mobile {
-        display: block;
-    }
-
-    .experiencia-screen {
-        display: none;
+    .contenedor-experiencia {
+        min-height: 900px;
     }
 
     .contenedor-experiencia .contenedor-flex,
@@ -656,7 +680,7 @@ footer .contenedor-sorpresa {
     .contenedor-flex .proyecto {
         width: 70%;
         margin: 2rem 0;
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem 1.5rem 1rem;
     }
 
     .proyecto div a {
@@ -719,10 +743,14 @@ footer .contenedor-sorpresa {
         font-size: 0.5rem;
     }
 
+    .contenedor-experiencia {
+        min-height: 750px;
+    }
+
     .contenedor-flex .proyecto {
         width: 100%;
         margin: 1rem 0;
-        padding: 2rem 0.8rem;
+        padding: 2rem 0.8rem 0.8rem 1rem;
     }
 
     .proyecto div a {

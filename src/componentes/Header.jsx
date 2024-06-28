@@ -10,7 +10,7 @@ function BotonModo({estado, modoOscuro, manejarClick}) {
 
     return (
         <>
-            <button className={`boton-modo ${estado}`} onClick={manejarClick}>
+            <button type="button" className={`boton-modo ${estado}`} onClick={manejarClick}>
                 { 
                     modoOscuro 
                         ? <img src={luna} alt='dark mode enabled' /> 
@@ -24,7 +24,7 @@ function BotonModo({estado, modoOscuro, manejarClick}) {
 export function BotonMail({estado}) {
     return (
         <>
-            <button className={`boton-mail ${estado}`}>
+            <button type="button" className={`boton-mail ${estado}`}>
                 <a href="mailto:paco19956@hotmail.com">Contactame</a>
             </button>
         </>
@@ -47,8 +47,8 @@ function Redes({estado}) {
         <>
             <div className={`links-redes ${estado}`}>
                 <span>Francisco Garcia Huidobro</span>
-                <div><a href="https://github.com/pepeargento22" target="_blank"><svg className="icon icon-github"><use xlinkHref="#icon-github"></use></svg></a></div>
-                <div><a href="https://www.linkedin.com/in/francisco-garcia-huidobro-2256a41b5/" target="_blank"><svg className="icon icon-linkedin"><use xlinkHref="#icon-linkedin"></use></svg></a></div>
+                <div><a href="https://github.com/pepeargento22" target="_blank" aria-label="perfil Github"><svg className="icon icon-github"><use xlinkHref="#icon-github"></use></svg></a></div>
+                <div><a href="https://www.linkedin.com/in/francisco-garcia-huidobro-2256a41b5/" target="_blank" aria-label="perfil Linkedin"><svg className="icon icon-linkedin"><use xlinkHref="#icon-linkedin"></use></svg></a></div>
             </div>
         </>
     )

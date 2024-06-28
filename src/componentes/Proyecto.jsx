@@ -2,7 +2,7 @@
 function ItemLista({texto}) {
     return (
         <li className='girable'>
-            {texto}
+            <svg className="icon"><use href={`#icon-${texto}`}></use></svg>
         </li>
     )
 }
@@ -27,21 +27,19 @@ export function Proyecto({ estado, titulo, pagina, repositorio, imagen, descripc
                 </p>
                 { tieneRepo 
                     ? (<a href={repositorio} target="_blank">
-                        <svg className="icon icon-embed2"><use xlinkHref="#icon-embed2"></use></svg> <span>Código</span>
+                        <svg className="icon icon-git"><use xlinkHref="#icon-git"></use></svg> <span>Código</span>
                     </a>)
                     :  (<br />)
                 }
-                <div>
-                    <ul>
+                    <ul className="proyecto-tecnologias">
                         {
                             tecnologias_utilizadas?.map((logo, index) => (
                                 <ItemLista 
                                     key = {index} 
-                                    texto={logo} //LO UNICO QUE ME FALTA ES METER LOS LOGOS CORRESPONDIENTES A CADA PROYECTO
+                                    texto={logo}
                                 />
                         ))}
                     </ul>
-                </div>
             </div>
         </>
     )

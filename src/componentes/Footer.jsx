@@ -2,9 +2,8 @@ import { easterEgg } from "../logica/easterEgg"
 import { useModos } from "../hooks/useModos"
 import { BotonMail } from "./Header"
 
-import cara from '../assets/cara.png'
+import cara from '../assets/cara.webp'
 import Audio from '../assets/Audio.mp3'
-
 
 export function Footer() {
     const { estadoModo } = useModos()
